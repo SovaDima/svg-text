@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Text</title>
+<!--     <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg  version="1.1" 
+        xmlns="http=://www.w3.org/2000/svg" 
+        xmlns:xlink="http=://www.w3.org/1999/xlink" 
+        xml:space="preserve" 
+        width="300" height="200" viewBox="0 0 300 200">
+
+        <title>SVGText</title>
+        <desc>TEXT BAD  BREAKFAST</desc>
+
+        <polyline points="1,1 299,1 299,199 1,199 1,1" 
+            fill="#ffffff" stroke="#cccccc" stroke-dasharray="5 3"
+            stroke-width="3" />
+
+        <defs>
+            <radialGradient id="gradient" cx="49" cy="50%" r="5.25%" spreadMethod="reflect">
+              <stop offset="55%" stop-color="#7dc4e8"/>
+              <stop offset="60%" stop-color="#b1dcf1"/>
+            </radialGradient>
+        </defs>
+        <rect x="5" y="5" width="290" height="190" fill="url(#gradient)"/>
+
+        <text x="35" y="85" fill="#000000" fill-opacity="0.3"
+            font-size="45" font-family="Lobster">
+            the Breaking
+        </text>
+        <text x="50" y="80" fill="#fbb400" stroke="#ffffff" stroke-width="1" 
+            font-size="40" font-family="Lobster">
+            the Breaking
+        </text>
+
+        <text x="90" y="165" fill="#000000"  fill-opacity="0.3"
+            font-size="80" font-family="Lobster" 
+            textLength="145" lengthAdjust="spacingAndGlyphs">
+            Bad
+        </text>
+        <text x="70" y="160" fill="#ff401a" stroke="#ffffff" stroke-width="2" 
+            font-size="80" font-family="Lobster" 
+            textLength="145" lengthAdjust="spacingAndGlyphs">
+            Bad
+        </text>
+
+        <defs>
+            <pattern id="dots" x="10" y="0" 
+                width="10" height="10" 
+                patternUnits="userSpaceOnUse">
+                <circle cx="15" cy="15" r="5" fill="white"/>
+            </pattern>
+        </defs>
+        <polygon points="65,95 225,95 225,175 65,175" fill="url(#dots)" 
+            clip-path="url(#clip-text)"/>
+        <clipPath id="clip-text">
+            <text x="65" y="160" fill="#ff401a" 
+                font-size="72" font-family="Lobster" 
+                textLength="145" lengthAdjust="spacingAndGlyphs">
+                Bad
+            </text>
+        </clipPath>
+    </svg>
+</body>
+
+</html>
